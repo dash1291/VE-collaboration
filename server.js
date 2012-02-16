@@ -32,8 +32,8 @@ function pushUser(user, socket) {
 
 function pushTransac(transac, socket) {
   //var xformedTransac = transform(transac);
-  socket.emit('transaction', xformedTransac); // this is how it acknowledges the client
-  socket.broadcast.emit('transaction', xformedTransac);
+  socket.emit('transaction', transac); // this is how it acknowledges the client
+  socket.broadcast.emit('transaction', transac);
 }
 
 var io = require('socket.io').listen(8080);
@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket) {
   socket.on('transaction', function(transaction) {
     console.log('new transaction: ' + JSON.stringify(transaction));
     //do something with the arrived transaction
-    pushTransac(transaction);
+    pushTransac(transaction, socket);
   });
 
 });

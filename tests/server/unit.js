@@ -1,27 +1,27 @@
-var io = require('socket.io');
+var io = require('./socket.io-client/lib/socket.io-client.js');
 var assert = require('assert');
 
 //Builds an array of websocket clients
 //address = address of the server , count = number of clients to build
 //Returns the array of websocket clients
 var serverAddr = 'http://localhost:8080';
-function buildClients(address, count) {
-  var clients = [];
-  for( i = 0; i < count; i++ ) {
-    client = io.connect(address);
-    clients.push(client);
-  }
-  return clients;
-}
     
 var testBroadcast = function() {
   var timeout = 0;
   var transac = 'test';
-  var clients = buildClients(serverAddr, 5);
-  for( var client in clients ) {
-    client.on('transaction', function(data) {
-      assert.equal(data, transac, 'Transaction broadcasted does not match.');
-    });
-  }
-  clients[0].emit('transaction', transac);      
+  var options = {
+    transports: ['websocket'],
+    'force new connection': true
+  };
+  var client1 = io.connect(serverAddr, options);
+  var client2 = io.connect(serverAddr, options);
+  var client3 = io.connect(serverAddr, options);
+  var callback = function(data) {
+    assert.equal(data, transac, 'Transaction broadcasted does not match.');
+  };
+  client1.on('transaction', callback);
+  client2.on('transaction', callback);
+  client3.on('transaction', callback);
+  client1.emit('transaction', transac);
+  return;
 }();
