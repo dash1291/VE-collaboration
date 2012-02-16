@@ -26,7 +26,6 @@ socket.on('transaction', function(transac) {
   //applyTransac(transac);
 });
 
-
 var onTransaction = function(transac) {
   //TODO::attach parentHash and localID to the transac
   socket.emit('transaction', transac);
