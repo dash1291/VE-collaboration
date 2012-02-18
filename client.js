@@ -11,6 +11,9 @@ function addUser(user) {
 
 function applyTransac(transac) {
   //TODO::apply transaction to the linear model
+  var newTransac = new es.TransactionModel( transac['operations'] );
+  newTransac['lengthDifference'] = transac['lengthDifference'];
+  window.surfaceView.model.transact( newTransac, true );
 }
 socket.on('connection', function() {
   socket.emit('user', user);
@@ -23,7 +26,7 @@ socket.on('user', function(user) {
 
 socket.on('transaction', function(transac) {
   console.log('transaction: ' + transac);
-  //applyTransac(transac);
+  applyTransac(transac);
 });
 
 var onTransaction = function(transac) {

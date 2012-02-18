@@ -2,7 +2,7 @@
 Much based on the Google Wave's implementation of operational transformation.
 */
 
-var clientSpaces, serverSpace, transacHistory, users;
+var clientSpaces, serverSpace, transacHistory, currentParent, users;
 function xform(client, server) {
   //TODO::xform function
   //xform different type transactions accordingly
@@ -44,13 +44,13 @@ function transform(clientTransac) {
 
 function pushUser(user, socket) {
   users.push(user);
-  socket.emit('user', user); //server acknowledgement for init?
+ // socket.emit('user', user); //server acknowledgement for init?
   socket.broadcast.emit('user', user);
 }
 
 function pushTransac(transac, socket) {
   //var xformedTransac = transform(transac);
-  socket.emit('transaction', transac); // this is how it acknowledges the client
+  //socket.emit('transaction', transac); // this is how it acknowledges the client
   socket.broadcast.emit('transaction', transac);
 }
 
