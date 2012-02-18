@@ -5,6 +5,24 @@ Much based on the Google Wave's implementation of operational transformation.
 var clientSpaces, serverSpace, transacHistory, users;
 function xform(client, server) {
   //TODO::xform function
+  //xform different type transactions accordingly
+  pos1 = server['operations'][0]['length'];
+  pos2 = client['operations'][0]['length'];
+  serverType = server['operations'][1]['type'];
+  count = server['lengthDifference'];
+  if( serverType == 'insert' ) {
+    if (pos2 >= pos1) {
+      pos2 = pos2 + count;
+    }
+  }
+  else if( serverType == 'remove' ) {
+    if( post2 >= pos1 ) {
+      pos2 = pos2 + count;
+    }
+  }
+  var transformed = client;
+  transformed['operations'][0]['length'] = pos2;
+  return transformed;
 }
 
 function transform(clientTransac) {
