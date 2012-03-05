@@ -2,7 +2,48 @@
 Much based on the Google Wave's implementation of operational transformation.
 */
 
+//Load the VE modules(models) here --->
+$ = require('jquery');
+
+window = {}; // globals flurry to make the VE 'require's work
+window.JSON = JSON;
+ve = {};
+ve.dm = {}; 
+
+// files included here:
+require('../ve/ve.js');
+require('../ve/ve.Position.js');
+require('../ve/ve.Range.js');
+require('../ve/ve.EventEmitter.js');
+require('../ve/ve.Node.js');
+require('../ve/ve.BranchNode.js');
+require('../ve/ve.LeafNode.js');
+require('../ve/dm/serializers/ve.dm.AnnotationSerializer.js');
+require('../ve/dm/serializers/ve.dm.HtmlSerializer.js');
+require('../ve/dm/serializers/ve.dm.JsonSerializer.js');
+require('../ve/dm/serializers/ve.dm.WikitextSerializer.js');
+require('../ve/dm/ve.dm.js');
+require('../ve/dm/ve.dm.Node.js');
+require('../ve/dm/ve.dm.BranchNode.js');
+require('../ve/dm/ve.dm.LeafNode.js');
+require('../ve/dm/ve.dm.TransactionProcessor.js');
+require('../ve/dm/ve.dm.Transaction.js');
+require('../ve/dm/ve.dm.Surface.js');
+require('../ve/dm/nodes/ve.dm.DocumentNode.js');
+require('../ve/dm/nodes/ve.dm.HeadingNode.js');
+require('../ve/dm/nodes/ve.dm.ParagraphNode.js');
+require('../ve/dm/nodes/ve.dm.PreNode.js');
+require('../ve/dm/nodes/ve.dm.ListItemNode.js');
+require('../ve/dm/nodes/ve.dm.ListNode.js');
+require('../ve/dm/nodes/ve.dm.TableCellNode.js');
+require('../ve/dm/nodes/ve.dm.TableNode.js');
+require('../ve/dm/nodes/ve.dm.TableRowNode.js');
+
 var clientSpaces, serverSpace, transacHistory, currentParent, users;
+
+var init = function() {
+
+}();
 function xform(client, server) {
   //TODO::xform function
   //xform different type transactions accordingly
@@ -26,11 +67,13 @@ function xform(client, server) {
 }
 
 function transform(clientTransac) {
-  var parentHash = clientTransac['parent'];
-  for( i = 0; !transacHistory[i]; i++ ) {
-    if( parentHash == transacHistory[i]['parent'] ) {
+  var parentHash = clientTransac['parentHash'];
+  for( i = transactionHistory.length-1; i >= 0; i-- ) {
+    if( parentHash > transacHistory[i]['parent'] ) {
       var serverTransac = transacHistory[i];
-      break;
+    }
+    if( parentHash < transacHistory[i] ) {
+        
     }
   }
   var pair = xform(clientTransac, serverTransac);
