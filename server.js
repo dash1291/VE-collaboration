@@ -3,6 +3,7 @@ Much based on the Google Wave's implementation of operational transformation.
 */
 
 //Load the VE modules(models) here --->
+/*
 $ = require('jquery');
 
 window = {}; // globals flurry to make the VE 'require's work
@@ -38,7 +39,7 @@ require('../ve/dm/nodes/ve.dm.ListNode.js');
 require('../ve/dm/nodes/ve.dm.TableCellNode.js');
 require('../ve/dm/nodes/ve.dm.TableNode.js');
 require('../ve/dm/nodes/ve.dm.TableRowNode.js');
-
+*/
 var clientSpaces, serverSpace, transacHistory, currentParent, users;
 
 var init = function() {
