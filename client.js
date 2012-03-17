@@ -9,6 +9,15 @@ function addUser(user) {
   //TODO::add user to the users list
 }
 
+function init( doc ) {
+  window.documentModel = es.DocumentModel.newFromPlainObject( doc );
+  window.surfaceModel = new es.SurfaceModel( window.documentModel );
+  window.surfaceView = new es.SurfaceView( $( '#es-editor' ), window.surfaceModel );
+  window.toolbarView = new es.ToolbarView( $( '#es-toolbar' ), window.surfaceView );
+  window.contextView = new es.ContextView( window.surfaceView );
+  window.surfaceModel.select( new es.Range( 1, 1 ) );
+}
+
 function applyTransac(transac) {
   //TODO::apply transaction to the linear model
   var newTransac = new es.TransactionModel( transac['operations'] );
@@ -17,6 +26,10 @@ function applyTransac(transac) {
 }
 socket.on('connection', function() {
   socket.emit('user', user);
+});
+
+socket.on('init', function(doc) {
+ // init(doc);
 });
 
 socket.on('user', function(user) {

@@ -3,48 +3,68 @@ Much based on the Google Wave's implementation of operational transformation.
 */
 
 //Load the VE modules(models) here --->
-/*
 $ = require('jquery');
 
 window = {}; // globals flurry to make the VE 'require's work
 window.JSON = JSON;
 ve = {};
 ve.dm = {}; 
-
+es = {};
 // files included here:
-require('../ve/ve.js');
-require('../ve/ve.Position.js');
-require('../ve/ve.Range.js');
-require('../ve/ve.EventEmitter.js');
-require('../ve/ve.Node.js');
-require('../ve/ve.BranchNode.js');
-require('../ve/ve.LeafNode.js');
-require('../ve/dm/serializers/ve.dm.AnnotationSerializer.js');
-require('../ve/dm/serializers/ve.dm.HtmlSerializer.js');
-require('../ve/dm/serializers/ve.dm.JsonSerializer.js');
-require('../ve/dm/serializers/ve.dm.WikitextSerializer.js');
-require('../ve/dm/ve.dm.js');
-require('../ve/dm/ve.dm.Node.js');
-require('../ve/dm/ve.dm.BranchNode.js');
-require('../ve/dm/ve.dm.LeafNode.js');
-require('../ve/dm/ve.dm.TransactionProcessor.js');
-require('../ve/dm/ve.dm.Transaction.js');
-require('../ve/dm/ve.dm.Surface.js');
-require('../ve/dm/nodes/ve.dm.DocumentNode.js');
-require('../ve/dm/nodes/ve.dm.HeadingNode.js');
-require('../ve/dm/nodes/ve.dm.ParagraphNode.js');
-require('../ve/dm/nodes/ve.dm.PreNode.js');
-require('../ve/dm/nodes/ve.dm.ListItemNode.js');
-require('../ve/dm/nodes/ve.dm.ListNode.js');
-require('../ve/dm/nodes/ve.dm.TableCellNode.js');
-require('../ve/dm/nodes/ve.dm.TableNode.js');
-require('../ve/dm/nodes/ve.dm.TableRowNode.js');
-*/
+require('../es/es.js')
+require('../es/es.Html.js')
+require('../es/es.Position.js')
+require('../es/es.Range.js')
+require('../es/es.TransactionProcessor.js')
+require('../es/bases/es.EventEmitter.js')
+require('../es/bases/es.DocumentNode.js')
+require('../es/bases/es.DocumentBranchNode.js')
+require('../es/bases/es.DocumentLeafNode.js')
+require('../es/bases/es.DocumentModelNode.js')
+require('../es/bases/es.DocumentModelBranchNode.js')
+require('../es/bases/es.DocumentModelLeafNode.js')
+require('../es/bases/es.DocumentViewNode.js')
+require('../es/bases/es.DocumentViewBranchNode.js')
+require('../es/bases/es.DocumentViewLeafNode.js')
+require('../es/bases/es.Inspector.js')
+require('../es/bases/es.Tool.js')
+require('../es/models/es.DocumentModel.js')
+require('../es/models/es.HeadingModel.js')
+require('../es/models/es.ListItemModel.js')
+require('../es/models/es.ListModel.js')
+require('../es/models/es.ParagraphModel.js')
+require('../es/models/es.PreModel.js')
+require('../es/models/es.SurfaceModel.js')
+require('../es/models/es.TableCellModel.js')
+require('../es/models/es.TableModel.js')
+require('../es/models/es.TableRowModel.js')
+require('../es/models/es.TransactionModel.js')
+require('../es/serializers/es.AnnotationSerializer.js')
+require('../es/serializers/es.HtmlSerializer.js')
+require('../es/serializers/es.JsonSerializer.js')
+require('../es/serializers/es.WikitextSerializer.js')
+doc = { 'type': 'document', 'children': [ {
+          'type': 'paragraph', 'content': { 
+            'text': ''
+          }
+        } ]
+}
+
 var clientSpaces, serverSpace, transacHistory, currentParent, users;
 
 var init = function() {
+  window.documentModel = es.DocumentModel.newFromPlainObject( doc );
+  window.surfaceModel = new es.SurfaceModel( window.documentModel );
+  window.surfaceModel.select( new es.Range( 1, 1 ) );
+
 
 }();
+
+function emitDocument( socket ) {
+ // doc = {'type': window.documentModel.type, 'children': window.documentModel.children };
+  socket.emit( 'init', doc );
+}
+
 function xform(client, server) {
   //TODO::xform function
   //xform different type transactions accordingly
@@ -95,13 +115,16 @@ function pushUser(user, socket) {
 function pushTransac(transac, socket) {
   //var xformedTransac = transform(transac);
   //socket.emit('transaction', transac); // this is how it acknowledges the client
+  var newTransac = new es.TransactionModel( transac['operations'] );
+  newTransac['lengthDifference'] = transac['lengthDifference'];
+  window.surfaceModel.transact( newTransac, true );
+
   socket.broadcast.emit('transaction', transac);
 }
 
 var io = require('socket.io').listen(8080);
 io.sockets.on('connection', function(socket) {
   //maybe do something on new client?
-
   socket.on('user', function(user) {
     console.log('new user: ' + user);
     newUser(user, socket);
@@ -112,5 +135,5 @@ io.sockets.on('connection', function(socket) {
     //do something with the arrived transaction
     pushTransac(transaction, socket);
   });
-
+  emitDocument( socket );
 });
