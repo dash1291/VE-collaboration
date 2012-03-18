@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/mediawiki/!svn/ver/113162/trunk/extensions/VisualEditor/tests/parser
+END
+wikia-rte-roundtrip-tests.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/101803/trunk/extensions/VisualEditor/tests/parser/wikia-rte-roundtrip-tests.xml
+END
+expansionTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/mediawiki/!svn/ver/101803/trunk/extensions/VisualEditor/tests/parser/expansionTest.js
+END
+worker.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/mediawiki/!svn/ver/101803/trunk/extensions/VisualEditor/tests/parser/worker.js
+END
+parserTests.pegjs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/112113/trunk/extensions/VisualEditor/tests/parser/parserTests.pegjs
+END
+parserTests.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/113162/trunk/extensions/VisualEditor/tests/parser/parserTests.js
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/mediawiki/!svn/ver/111838/trunk/extensions/VisualEditor/tests/parser/README
+END
+roundtrip.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/mediawiki/!svn/ver/101803/trunk/extensions/VisualEditor/tests/parser/roundtrip.js
+END
+__patched-html5-parser.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/112226/trunk/extensions/VisualEditor/tests/parser/__patched-html5-parser.js
+END
+dumpReader.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/mediawiki/!svn/ver/112489/trunk/extensions/VisualEditor/tests/parser/dumpReader.js
+END
+parserTests-whitelist.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/mediawiki/!svn/ver/113140/trunk/extensions/VisualEditor/tests/parser/parserTests-whitelist.js
+END
+tests.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/mediawiki/!svn/ver/101803/trunk/extensions/VisualEditor/tests/parser/tests.html
+END
+dumpGrepper.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/112900/trunk/extensions/VisualEditor/tests/parser/dumpGrepper.js
+END
+__patched-html5-parser.coffee
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/112226/trunk/extensions/VisualEditor/tests/parser/__patched-html5-parser.coffee
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/mediawiki/!svn/ver/112226/trunk/extensions/VisualEditor/tests/parser/Makefile
+END
+roundtrip-test.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/104860/trunk/extensions/VisualEditor/tests/parser/roundtrip-test.js
+END
