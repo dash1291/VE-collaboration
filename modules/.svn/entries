@@ -1,46 +1,0 @@
-10
-
-dir
-113563
-http://svn.wikimedia.org/svnroot/mediawiki/trunk/extensions/VisualEditor/modules
-http://svn.wikimedia.org/svnroot/mediawiki
-
-
-
-2012-03-10T00:31:28.939741Z
-113550
-catrope
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dd0e9695-b195-4be7-bd10-2dea1a65a6b6
-
-jquery
-dir
-
-qunit
-dir
-
-rangy
-dir
-
-ve
-dir
-
-parser
-dir
-
-sandbox
-dir
-
