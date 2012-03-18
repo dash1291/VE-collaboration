@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/ve
+END
+ve.EventEmitter.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.EventEmitter.js
+END
+ve.Range.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.Range.js
+END
+ve.LeafNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.LeafNode.js
+END
+ve.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/mediawiki/!svn/ver/113420/trunk/extensions/VisualEditor/modules/ve/ve.js
+END
+ve.BranchNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.BranchNode.js
+END
+ve.Position.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.Position.js
+END
+ve.Node.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ve.Node.js
+END

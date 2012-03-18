@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/mediawiki/!svn/ver/110457/trunk/extensions/VisualEditor/contentEditable/rangy
+END
+rangy-core.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/mediawiki/!svn/ver/110015/trunk/extensions/VisualEditor/contentEditable/rangy/rangy-core.js
+END
+rangy-selectionsaverestore.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/mediawiki/!svn/ver/110067/trunk/extensions/VisualEditor/contentEditable/rangy/rangy-selectionsaverestore.js
+END
+rangy-serializer.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/110067/trunk/extensions/VisualEditor/contentEditable/rangy/rangy-serializer.js
+END
+rangy-cssclassapplier.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/mediawiki/!svn/ver/110067/trunk/extensions/VisualEditor/contentEditable/rangy/rangy-cssclassapplier.js
+END
+rangy-position.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/mediawiki/!svn/ver/110457/trunk/extensions/VisualEditor/contentEditable/rangy/rangy-position.js
+END

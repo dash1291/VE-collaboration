@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/mediawiki/!svn/ver/112733/trunk/extensions/VisualEditor/modules/ve/es/styles
+END
+ve.es.Content.css
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/111482/trunk/extensions/VisualEditor/modules/ve/es/styles/ve.es.Content.css
+END
+ve.es.Document.css
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/styles/ve.es.Document.css
+END
+ve.es.Surface.css
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/styles/ve.es.Surface.css
+END

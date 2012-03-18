@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/parser
+END
+mediawiki.HTML5TreeBuilder.node.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/mediawiki.HTML5TreeBuilder.node.js
+END
+ext.core.QuoteTransformer.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/mediawiki/!svn/ver/111485/trunk/extensions/VisualEditor/modules/parser/ext.core.QuoteTransformer.js
+END
+ext.core.NoIncludeOnly.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/ext.core.NoIncludeOnly.js
+END
+mediawiki.TokenTransformManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/parser/mediawiki.TokenTransformManager.js
+END
+mediawiki.DOMConverter.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/mediawiki/!svn/ver/111485/trunk/extensions/VisualEditor/modules/parser/mediawiki.DOMConverter.js
+END
+parse.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/mediawiki/!svn/ver/113360/trunk/extensions/VisualEditor/modules/parser/parse.js
+END
+mediawiki.parser.defines.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/mediawiki.parser.defines.js
+END
+ext.core.ParserFunctions.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/113360/trunk/extensions/VisualEditor/modules/parser/ext.core.ParserFunctions.js
+END
+ext.Util.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/mediawiki/!svn/ver/113043/trunk/extensions/VisualEditor/modules/parser/ext.Util.js
+END
+pegTokenizer.pegjs.txt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/mediawiki/!svn/ver/113366/trunk/extensions/VisualEditor/modules/parser/pegTokenizer.pegjs.txt
+END
+ext.core.AttributeExpander.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/mediawiki/!svn/ver/113162/trunk/extensions/VisualEditor/modules/parser/ext.core.AttributeExpander.js
+END
+ext.core.LinkHandler.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/113353/trunk/extensions/VisualEditor/modules/parser/ext.core.LinkHandler.js
+END
+mediawiki.Title.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/mediawiki/!svn/ver/113162/trunk/extensions/VisualEditor/modules/parser/mediawiki.Title.js
+END
+ext.Cite.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/ext.Cite.js
+END
+mediawiki.tokenizer.peg.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/113366/trunk/extensions/VisualEditor/modules/parser/mediawiki.tokenizer.peg.js
+END
+mediawiki.DOMPostProcessor.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svnroot/mediawiki/!svn/ver/111485/trunk/extensions/VisualEditor/modules/parser/mediawiki.DOMPostProcessor.js
+END
+ext.cite.taghook.ref.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/101712/trunk/extensions/VisualEditor/modules/parser/ext.cite.taghook.ref.js
+END
+ext.core.Sanitizer.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/mediawiki/!svn/ver/111971/trunk/extensions/VisualEditor/modules/parser/ext.core.Sanitizer.js
+END
+mediawiki.parser.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/mediawiki/!svn/ver/113274/trunk/extensions/VisualEditor/modules/parser/mediawiki.parser.js
+END
+ext.core.TemplateHandler.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/ext.core.TemplateHandler.js
+END
+ext.core.PostExpandParagraphHandler.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/ext.core.PostExpandParagraphHandler.js
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/mediawiki/!svn/ver/112807/trunk/extensions/VisualEditor/modules/parser/README.txt
+END
+mediawiki.parser.environment.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/mediawiki/!svn/ver/113366/trunk/extensions/VisualEditor/modules/parser/mediawiki.parser.environment.js
+END
+ext.util.TokenCollector.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/113285/trunk/extensions/VisualEditor/modules/parser/ext.util.TokenCollector.js
+END

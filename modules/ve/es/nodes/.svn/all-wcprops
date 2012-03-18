@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/mediawiki/!svn/ver/112176/trunk/extensions/VisualEditor/modules/ve/es/nodes
+END
+ve.es.HeadingNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.HeadingNode.js
+END
+ve.es.TableRowNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.TableRowNode.js
+END
+ve.es.ParagraphNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.ParagraphNode.js
+END
+ve.es.PreNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/mediawiki/!svn/ver/112176/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.PreNode.js
+END
+ve.es.TableCellNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.TableCellNode.js
+END
+ve.es.TableNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.TableNode.js
+END
+ve.es.ListItemNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.ListItemNode.js
+END
+ve.es.ListNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.ListNode.js
+END
+ve.es.DocumentNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/nodes/ve.es.DocumentNode.js
+END

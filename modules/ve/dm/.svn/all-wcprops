@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/ve/dm
+END
+ve.dm.DocumentSynchronizer.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.DocumentSynchronizer.js
+END
+ve.dm.LeafNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.LeafNode.js
+END
+ve.dm.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/mediawiki/!svn/ver/113530/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.js
+END
+ve.dm.BranchNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.BranchNode.js
+END
+ve.dm.Node.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/113192/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.Node.js
+END
+ve.dm.Transaction.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/mediawiki/!svn/ver/113419/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.Transaction.js
+END
+ve.dm.TransactionProcessor.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/mediawiki/!svn/ver/113550/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.TransactionProcessor.js
+END
+ve.dm.Surface.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/112280/trunk/extensions/VisualEditor/modules/ve/dm/ve.dm.Surface.js
+END

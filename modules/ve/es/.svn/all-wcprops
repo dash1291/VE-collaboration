@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/mediawiki/!svn/ver/113051/trunk/extensions/VisualEditor/modules/ve/es
+END
+ve.es.Node.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/112277/trunk/extensions/VisualEditor/modules/ve/es/ve.es.Node.js
+END
+ve.es.Surface.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/113051/trunk/extensions/VisualEditor/modules/ve/es/ve.es.Surface.js
+END
+ve.es.Content.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/112277/trunk/extensions/VisualEditor/modules/ve/es/ve.es.Content.js
+END
+ve.es.LeafNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/mediawiki/!svn/ver/112176/trunk/extensions/VisualEditor/modules/ve/es/ve.es.LeafNode.js
+END
+ve.es.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/mediawiki/!svn/ver/110863/trunk/extensions/VisualEditor/modules/ve/es/ve.es.js
+END
+ve.es.BranchNode.js
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/es/ve.es.BranchNode.js
+END

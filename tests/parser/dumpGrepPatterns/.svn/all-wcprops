@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/mediawiki/!svn/ver/112682/trunk/extensions/VisualEditor/tests/parser/dumpGrepPatterns
+END
+martian-endtags.sh
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/mediawiki/!svn/ver/112595/trunk/extensions/VisualEditor/tests/parser/dumpGrepPatterns/martian-endtags.sh
+END
+misc.txt
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/mediawiki/!svn/ver/112682/trunk/extensions/VisualEditor/tests/parser/dumpGrepPatterns/misc.txt
+END

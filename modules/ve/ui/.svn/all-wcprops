@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/mediawiki/!svn/ver/113095/trunk/extensions/VisualEditor/modules/ve/ui
+END
+ve.ui.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/mediawiki/!svn/ver/110863/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.js
+END
+ve.ui.Toolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/112929/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.Toolbar.js
+END
+ve.ui.Context.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.Context.js
+END
+ve.ui.Menu.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.Menu.js
+END
+ve.ui.Inspector.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.Inspector.js
+END
+ve.ui.Tool.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/mediawiki/!svn/ver/110805/trunk/extensions/VisualEditor/modules/ve/ui/ve.ui.Tool.js
+END
