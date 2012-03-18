@@ -50,7 +50,7 @@ doc = { 'type': 'document', 'children': [ {
         } ]
 }
 
-var clientSpaces, serverSpace, transacHistory, currentParent, users;
+var clientSpaces, serverSpace, transacHistory, currentParent, editor = null;
 
 var init = function() {
   window.documentModel = es.DocumentModel.newFromPlainObject( doc );
@@ -61,8 +61,12 @@ var init = function() {
 }();
 
 function emitDocument( socket ) {
- // doc = {'type': window.documentModel.type, 'children': window.documentModel.children };
-  socket.emit( 'init', doc );
+  server_doc = JSON.stringify(window.documentModel.data);
+  data = { 'doc': server_doc };
+  if( editor ) {
+    data['editor'] = editor;
+  }
+  socket.emit( 'init', data );
 }
 
 function xform(client, server) {
@@ -126,8 +130,24 @@ var io = require('socket.io').listen(8080);
 io.sockets.on('connection', function(socket) {
   //maybe do something on new client?
   socket.on('user', function(user) {
-    console.log('new user: ' + user);
-    newUser(user, socket);
+    socket.set('username', user, function() {
+      emitDocument( socket );
+      if( !editor ) {
+        editor = user; 
+      }
+    });
+  });
+  socket.on('logout', function( user ) {
+    if( editor==user ) {
+      editor = null;
+    }
+  });
+  socket.on('disconnect', function() {
+    username = socket.get('username', function(err, name) {
+      if( editor==name ) {
+        editor = null;
+      }
+    });
   });
 
   socket.on('transaction', function(transaction) {
@@ -135,5 +155,4 @@ io.sockets.on('connection', function(socket) {
     //do something with the arrived transaction
     pushTransac(transaction, socket);
   });
-  emitDocument( socket );
 });
