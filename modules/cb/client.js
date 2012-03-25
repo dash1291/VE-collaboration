@@ -1,8 +1,12 @@
 //Script to establish websocket connection with the nodeJS collaboration server
 //Requires socket.io.js
 
-var user = prompt('Username', 'default');
-var socket = io.connect('http://localhost:8080');
+var user = null;
+while( !user ) {
+  user = prompt('Username');
+}
+var socket = io.connect('http://ec2-23-20-65-141.compute-1.amazonaws.com:8080');
+socket.emit('user', user);
 var bufferQueue;
 var readonly = false;
 function addUser(user) {
@@ -54,8 +58,8 @@ socket.on('transaction', function(transac) {
   applyTransac(transac);
 });
 
-socket.emit('user', user);
 var onTransaction = function(transac) {
   //TODO::attach parentHash and localID to the transac
   socket.emit('transaction', transac);
 };
+
