@@ -50,7 +50,7 @@ doc = { 'type': 'document', 'children': [ {
         } ]
 }
 
-var clientSpaces, serverSpace, transacHistory, currentParent, editor = null;
+var clientSpaces, serverSpace, transacHistory, currentParent, editor = null, users = [];
 
 var init = function() {
   window.documentModel = es.DocumentModel.newFromPlainObject( doc );
@@ -66,6 +66,7 @@ function emitDocument( socket ) {
   if( editor ) {
     data['editor'] = editor;
   }
+  data['users'] = JSON.stringify( users );
   socket.emit( 'init', data );
 }
 
@@ -112,7 +113,7 @@ function transform(clientTransac) {
 
 function pushUser(user, socket) {
   users.push(user);
- // socket.emit('user', user); //server acknowledgement for init?
+  socket.emit('user', user); //server acknowledgement for init?
   socket.broadcast.emit('user', user);
 }
 
@@ -131,19 +132,17 @@ io.sockets.on('connection', function(socket) {
   //maybe do something on new client?
   socket.on('user', function(user) {
     socket.set('username', user, function() {
+      pushUser( user, socket );
       emitDocument( socket );
       if( !editor ) {
         editor = user; 
       }
     });
   });
-  socket.on('logout', function( user ) {
-    if( editor==user ) {
-      editor = null;
-    }
-  });
   socket.on('disconnect', function() {
     username = socket.get('username', function(err, name) {
+      socket.broadcast.emit( 'logout', name );
+      users.splice( users.indexOf( name ), 1 );
       if( editor==name ) {
         editor = null;
       }

@@ -2,26 +2,44 @@
 //Requires socket.io.js
 
 var user = null;
+var users = [];
 while( !user ) {
   user = prompt('Username');
 }
 var socket = io.connect('http://ec2-23-20-65-141.compute-1.amazonaws.com:8080');
 socket.emit('user', user);
 var bufferQueue;
-var readonly = false;
+var readonly = true;
+
 function addUser(user) {
+  users.push( user );
+  var markup = $('#cb-activity').html() +
+                '<p><span style="font-weight: bold">' + user + 
+                '</span> joined the session.</p>';
+  $("#cb-activity").html( markup );
+  //TODO::add user to the users list
+}
+
+function removeUser(user) {
+  users.splice( users.indexOf( user ) );
+  var markup = $('#cb-activity').html() +
+                '<p><span style="font-weight: bold">' + user + 
+                '</span><span style="color: red"> left the session.</span></p>';
+  $("#cb-activity").html( markup );
   //TODO::add user to the users list
 }
 
 function init( data ) {
   if( data['editor'] ) {
-    console.log(data['editor']);
+    var editor = data['editor'];
     var markup = $('#firstHeading').html() + 
                   '<small><span><b> (Read-only mode;<b></span><span> Currently editing:' + 
                   '</span><span style="color:red">' +
-                   data['editor'] + ')</span></small>';
+                   editor + ')</span></small>';
     $("#firstHeading").html(markup);
-    readonly = true;
+  }
+  else {
+    readonly = false;
   }
   var newDocumentModel = new es.DocumentModel( JSON.parse( data['doc'] ) );
   window.documentModel.data.splice( 0, documentModel.data.length );
@@ -48,9 +66,8 @@ socket.on('init', function( data ) {
   init( data );
 });
 
-socket.on('user', function(user) {
-  console.log('new user: ' + user);
-  //addUser(user);
+socket.on('user', function(user) { 
+  addUser(user);
 });
 
 socket.on('transaction', function(transac) {
@@ -58,6 +75,9 @@ socket.on('transaction', function(transac) {
   applyTransac(transac);
 });
 
+socket.on('logout', function(user) {
+  removeUser( user );
+});
 var onTransaction = function(transac) {
   //TODO::attach parentHash and localID to the transac
   socket.emit('transaction', transac);

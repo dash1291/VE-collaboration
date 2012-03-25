@@ -1,10 +1,10 @@
 <!-- VisualEditor Sandbox -->
-<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script src="http://ec2-23-20-65-141.compute-1.amazonaws.com:8080/socket.io/socket.io.js"></script>
 <div id="es-docs" style="visibility: hidden">
 	<div id="es-docs-label">Example documents:</div>
 	<ul id="es-docs-list" ></ul>
 </div>
-<div id="es-base" style="visibility: hidden">
+<div id="es-base" style="visibility: hidden; width: 75%; float: left">
 	<div id="es-toolbar-wrapper">
 		<div id="es-toolbar" class="es-toolbar">
 			<div id="es-modes" class="es-modes">
@@ -125,5 +125,8 @@
 		</div>
 		<div style="clear:both"></div>
 	</div>
+</div>
+<div id="cb-activity" style="padding-left: 5px; float: right; width: 24%; background-color: #ddd;">
+  <h2 style="margin-left: 35%;">Activity</h2>
 </div>
 <!-- /VisualEditor Sandbox -->
